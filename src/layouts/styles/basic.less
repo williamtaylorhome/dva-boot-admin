@@ -1,0 +1,74 @@
+.basic-layout {
+  &.fixed-header {
+    > .ant-layout-header {
+      z-index: 3;
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+    }
+  }
+  > .ant-layout.ant-layout-has-sider {
+    min-height: ~'calc(100vh - 60px)'; //Exclude the top
+  }
+  /*Apply Layout & Layout Settings*/
+  &.full-layout {
+    //Pin all elements, classic admin interface style, i.e. fixed header, sidebar, breadcrumb
+    &.fixed.ant-layout,
+    &.fixed .full-layout.ant-layout {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      .ant-layout-sider > .ant-layout-sider-children {
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+    }
+    //Only the head is fixed
+    &:not(.fixed)&.fixed-header {
+      > .ant-layout-header {
+        position: fixed;
+        z-index: 200;
+        left: 0;
+        right: 0;
+      }
+      > .ant-layout {
+        padding-top: 60px;
+        overflow: auto;
+      }
+      .ant-layout.ant-layout-has-sider > .ant-layout,
+      .ant-layout.ant-layout-has-sider > .ant-layout-content {
+        overflow-x: visible;
+      }
+    }
+    //Only the breadcrumbs are fixed, and the head must be fixed before it can take effect
+    &.fixed-breadcrumbs {
+      & > .ant-layout-header {
+        box-shadow: none;
+        z-index: 2;
+      }
+      & > .ant-layout > .ant-layout-content > .ant-layout {
+        .router-page.ant-layout-content {
+          overflow: auto;
+        }
+        > .ant-layout-header {
+          z-index: 3;
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+        }
+      }
+    }
+    //Hide breadcrumbs
+    &.hided-breadcrumbs .topbar-content {
+      display: none;
+    }
+    &.hided-breadcrumbs {
+      .router-page,
+      .router-page > .ant-layout {
+        min-height: ~'calc(100vh - 62px)'; //Exclude the top
+      }
+    }
+    .router-page,
+    .router-page > .ant-layout {
+      min-height: ~'calc(100vh - 110px)'; //Eliminate tops and breadcrumbs
+    }
+  }
+}

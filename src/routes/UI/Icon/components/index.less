@@ -1,0 +1,93 @@
+.icon-page{
+  &-list{
+    color: #666;
+    > li {
+      margin: 9px 8px;
+      float: left;
+      text-align: center;
+      position: relative;
+      overflow: visible;
+      border-radius: 5px;
+      padding: 8px 5px 0 5px;
+      width: 90px;
+      min-height: 90px;
+      transition: .3s all;
+      cursor: pointer;
+      > .antui-icon {
+        font-size: 3em;
+        display: block;
+        margin-bottom: 10px;
+      }
+      > span {
+        white-space: nowrap;
+        word-wrap: break-word;
+        font-size: 12px;
+      }
+      &:hover{
+        background: #607D8B;
+        color: #fff;
+      }
+    }
+  }
+}
+
+//Use a different icon library
+@font-face {
+  font-family: 'iconfont';  /*project id 299911*/
+  src: url('https://at.alicdn.com/t/font_etsf5fllm3uzbyb9.eot');
+  src: url('https://at.alicdn.com/t/font_etsf5fllm3uzbyb9.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_etsf5fllm3uzbyb9.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_etsf5fllm3uzbyb9.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_etsf5fllm3uzbyb9.svg#iconfont') format('svg');
+}
+
+.iconfont{
+  position: relative;
+  display: inline-block;
+  font: normal normal normal 16px/1 'iconfont';
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+.iconfont-loading:before { content: "\eee3"; }              // Loading
+.iconfont-rmb:before { content: "\e6b0"; }                  //Renminbi
+.iconfont-card:before { content: "\e613"; }                 // Card display
+.iconfont-list:before { content: "\e612"; }                 //List presentation
+.iconfont-search:before { content: "\e6ac"; }               // Inquiry|magnifying glass
+.iconfont-location:before { content: "\e734"; }             // Map bubbles
+.iconfont-pulldown:before { content: "\e608"; }             // Drop down
+.iconfont-mine-o:before { content: "\e60e"; }               //It's mine
+.iconfont-mine:before { content: "\e60d"; }                 // Mine - checked
+.iconfont-password:before { content: "\e603"; }             //password
+.iconfont-caret-right:before { content: "\e607"; }          // Triangle Right
+.iconfont-caret-left:before { content: "\e606"; }           // Triangle Left
+.iconfont-caret-down:before { content: "\e605"; }           // Under the triangle
+.iconfont-caret-top:before { content: "\e604"; }            // on the triangle
+.iconfont-check:before { content: "\e616"; }                // Select the check mark
+.iconfont-cross:before { content: "\e615"; }                // Close the cross
+.iconfont-right:before { content: "\e618"; }                // Right arrow
+.iconfont-left:before { content: "\e617"; }                 // Left arrow
+.iconfont-top:before { content: "\e619"; }                  // Up arrow
+.iconfont-bottom:before { content: "\e61a"; }               // Down arrow
+.iconfont-arrow-top:before { content: "\e795"; }            // The upper arrow is thick
+.iconfont-arrow-bottom:before { content: "\e796"; }         // The down arrow is thick
+.iconfont-add:before { content: "\e727"; }                  //plus
+.iconfont-minus:before { content: "\e729"; }                //minus sign
+.iconfont-info-circle-o:before { content: "\e6e5"; }        // info|Information circle hollow
+.iconfont-info-circle:before { content: "\e6e4"; }          // info 
+.iconfont-warning-o:before { content: "\e663"; }            // Warning|Triangle exclamation mark hollow
+.iconfont-warning:before { content: "\e662"; }              // Warning|triangle
+.iconfont-cross-circle-o:before { content: "\e659"; }       // Close|cross round hollow
+.iconfont-cross-circle:before { content: "\e658"; }         // Close the cross circle
+.iconfont-check-circle-o:before { content: "\e657"; }       // Successful round hollow
+.iconfont-check-circle:before { content: "\e656"; }         // Success Circle
+.iconfont-delete:before { content: "\e61b"; }               // Delete the Trash
+.iconfont-back:before { content: "\e63d"; }                 //return
+.iconfont-upload:before { content: "\e65a"; }               //upload
+.iconfont-download:before { content: "\e61e"; }             // Download 
+.iconfont-up-circle:before { content: "\e6a0"; }            // Up the circle
+.iconfont-down-circle:before { content: "\e69f"; }          // Down the circle
+
